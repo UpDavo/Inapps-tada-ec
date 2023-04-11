@@ -1,0 +1,83 @@
+<div class="countdown box">
+    <div class="box-inner">
+        <div class="container text-center" style="margin-top: 50%">
+            <!-- <img src="assets/img/fiestacerca_logo_blanco.png" alt="fiestacerca" class="image_center"> -->
+            <h1 style="font-size: 2.5rem; margin-bottom: 15px;" class="text-white text-2xl uppercase tracking-widest">
+                ¡Mañana Juega la
+                <span style="color:Yellow;">T</span>
+                <span style="color:Blue;">R</span>
+                <span style="color:Red;">I</span> y empieza el mundial!
+            </h1>
+
+            <h2 class="text-white text-2xl uppercase tracking-widest" style="font-family:Monserrat; font-size: 14px">Prepárate para el partido</h2>
+            <h2 class="text-white text-2xl uppercase tracking-widest" style="font-family:Monserrat; font-size: 40px"><b>25% off</b></h2>
+            <h2 class="text-white text-2xl uppercase tracking-widest" style="font-family:Monserrat; font-size: 19px; color:yellow">En todas las cervezas</h2>
+
+
+
+            <div class="mt-10 flex justify-center gap-3 md:gap-8" style="margin-top: 26px">
+
+                <div *ngIf="daysToDday <= 0 && hoursToDday <= 0 && minutesToDday <= 0 && secondsToDday <= 0; then thenBlock else elseBlock"></div>
+
+                <ng-template #thenBlock>
+                    <h1 style="font-size: 2.5rem; margin-bottom: 15px;" class="text-white text-2xl uppercase tracking-widest">
+                        ¡Es Hoy!
+                    </h1>
+                </ng-template>
+                <ng-template #elseBlock>
+                    <div>
+                        <div class="rounded-lg shadow-xl bg-secondaryDark w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 flex items-center justify-center relative">
+                            <div class="bg-veryDarkBlue w-3 h-3 rounded-lg absolute -left-2"></div>
+                            <div class="bg-veryDarkBlue w-3 h-3 rounded-lg absolute -right-2"></div>
+
+                            <h1 class="text-primary text-3xl sm:text-4xl md:text-6xl lg:text-7xl"> {{daysToDday}} </h1>
+                        </div>
+                        <h5 class="uppercase text-white mt-5 text-xs sm:text-sm lg:text-lg" style="font-size:1rem">
+                            Días
+                        </h5>
+                    </div>
+
+                    <div>
+                        <div class="rounded-lg shadow-xl bg-secondaryDark w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 flex items-center justify-center relative">
+                            <div class="bg-veryDarkBlue w-3 h-3 rounded-lg absolute -left-2"></div>
+                            <div class="bg-veryDarkBlue w-3 h-3 rounded-lg absolute -right-2"></div>
+
+                            <h1 class="text-primary text-3xl sm:text-4xl md:text-6xl lg:text-7xl"> {{hoursToDday}}</h1>
+                        </div>
+                        <h5 class="uppercase text-white mt-5 text-xs sm:text-sm lg:text-lg" style="font-size:1rem">
+                            Horas
+                        </h5>
+                    </div>
+
+                    <div>
+                        <div class="rounded-lg shadow-xl bg-secondaryDark w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 flex items-center justify-center relative">
+                            <div class="bg-veryDarkBlue w-3 h-3 rounded-lg absolute -left-2"></div>
+                            <div class="bg-veryDarkBlue w-3 h-3 rounded-lg absolute -right-2"></div>
+
+                            <h1 class="text-primary text-3xl sm:text-4xl md:text-6xl lg:text-7xl"> {{minutesToDday}}</h1>
+                        </div>
+                        <h5 class="uppercase text-white mt-5 text-xs sm:text-sm lg:text-lg" style="font-size:1rem">
+                            Minutos
+                        </h5>
+                    </div>
+
+                    <div>
+                        <div class="rounded-lg shadow-xl bg-secondaryDark w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 flex items-center justify-center relative">
+                            <div class="bg-veryDarkBlue w-3 h-3 rounded-lg absolute -left-2"></div>
+                            <div class="bg-veryDarkBlue w-3 h-3 rounded-lg absolute -right-2"></div>
+
+                            <h1 class="text-primary text-3xl sm:text-4xl md:text-6xl lg:text-7xl">{{secondsToDday}}</h1>
+                        </div>
+                        <h5 class="uppercase text-white mt-5 text-xs sm:text-sm lg:text-lg" style="font-size:1rem">
+                            Segundos
+                        </h5>
+                    </div>
+                </ng-template>
+
+
+            </div>
+
+            <!-- <img src="assets/img/sombrero.gif" alt="fiestacerca" class="image_center" style="margin-top: -5rem; height: 19rem;"> -->
+        </div>
+    </div>
+</div>

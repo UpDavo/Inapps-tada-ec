@@ -1,0 +1,78 @@
+<div class="countdown box overflow-hidden">
+  <div class="box-inner w-full">
+    <div class="container text-center" style="margin-top: 1rem">
+      <div class="start">
+        <div *ngIf="loading" class="h-screen flex justify-center items-center">
+          <div>
+            <div>
+              <progress class="progress w-56 progress-secondary"></progress>
+              <h1 class="mt-1 uppercase text-primary">Cargando</h1>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="!loading" class="titulos" align="center">
+          <img class="mt-14" src="/assets/img/prueba_y_gana.png" alt="logo" />
+          <div class="flex justify-center gap-3 md:gap-8">
+            <div id="app">
+              <section class="machine my-[9vh]" id="Slots">
+                <div class="slots-container">
+                  <div id="slot1" class="a4"></div>
+                  <div id="slot2" class="a4"></div>
+                  <div id="slot3" class="a4"></div>
+                </div>
+              </section>
+
+              <div class="-mt-6">
+                <button
+                  *ngIf="!doing"
+                  class="imgButton animate-pulse w-[60%]"
+                  (click)="doSlot()"
+                ></button>
+                <button
+                  *ngIf="doing"
+                  class="imgButton animate-bounce w-[60%]"
+                  (click)="doSlot()"
+                ></button>
+              </div>
+              <div
+                class="overflow-hidden text-white"
+                style="font-family: Monserrat !important"
+                *ngIf="lives != 0"
+              >
+                <br />
+                <div class="flex justify-center items-center gap-3">
+                  <div class="font-bold text-2xl mt-3">
+                    CHANCES<br />RESTANTES
+                  </div>
+                  <div class="font-bold text-7xl bg-indigo-500 p-2 px-3">
+                    {{ lives }}
+                  </div>
+                </div>
+              </div>
+              <div
+                class="overflow-hidden text-white"
+                style="font-family: Monserrat !important"
+                *ngIf="lives == 0"
+              >
+                <br />
+                <div class="flex justify-center items-center gap-3">
+                  <div class="font-bold text-2xl mt-3 pb-2 leading-relaxed">
+                    ÚLTIMO <br />
+                    CHANCE
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="visibility: hidden" class="a1"></div>
+<div style="visibility: hidden" class="a2"></div>
+<div style="visibility: hidden" class="a3"></div>
+<div style="visibility: hidden" class="a4"></div>
+<div style="visibility: hidden" class="a5"></div>
