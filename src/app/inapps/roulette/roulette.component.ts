@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
 // Counter clockwise
 const symbolSegments: any = {
-  1: "TROPICAL <br> <span style='font-size:0.9rem;font-family: Monserrat !important;'>Gratis bolso Corona Tropical</span>",
-  2: "VERANO2 <br> <span style='font-size:0.9rem;font-family: Monserrat !important;'>15% de Descuento en cervezas</span>",
-  3: "TADAFUN <br> <span style='font-size:0.9rem;font-family: Monserrat !important;'>3$ de Descuento en cervezas</span>",
-  4: "SUMMERLOVE <br> <span style='font-size:0.9rem;font-family: Monserrat !important;'>4$ de Descuento en cervezas</span>",
-  5: "SOL <br> <span style='font-size:0.9rem;font-family: Monserrat !important;'>25% De Descuento en cervezas</span>",
+  1: '¡Felicidades tienes un gift card de $5  CLUBPYCCA!  Recíbelo en el stand.',
+  2: '!Felicidades tienes 15% gratis en cervezas! Recibe tu cupón en el stand.',
+  3: '!Felicidades tienes $3 gratis en cervezas! Recibe tu cupón en el stand.',
+  4: '!Felicidades tienes $4 gratis en cervezas! Recibe tu cupón en el stand.',
+  5: '¡Felicidades tienes un premio CLUBPYCCA! Recíbelo en el stand.',
   6: 'Lo Sentimos, Sigue participando',
-  7: "SIXCARNAVAL <br> <span style='font-size:0.9rem;font-family: Monserrat !important;'>Six pack Gratis</span>",
-  8: "RULETA <br> <span style='font-size:0.9rem;font-family: Monserrat !important;'>$2 de Descuento en cerveza</span>",
+  7: '¡Felicidades tienes un premio TaDa! Recíbelo en el stand.',
+  8: '!Felicidades tienes $2 gratis en cervezas! Recibe tu cupón en el stand. ',
 };
 
 @Component({
@@ -43,7 +43,7 @@ export class RouletteComponent implements OnInit {
         imageAlt: 'Custom image',
         html: `${
           winningSymbolNr != 6
-            ? `<h3 style='font-size:0.9rem;font-family: Monserrat !important;'>Tu cupón de regalo es: </h2><br><h3 style='font-family: Bright !important;font-size: 2.6rem;color: #270a45;'>
+            ? `<h3 style='font-family: Bright !important;font-size: 2.6rem;color: #270a45;'>
               ${symbolSegments[winningSymbolNr]} 
               </h3>`
             : ''
