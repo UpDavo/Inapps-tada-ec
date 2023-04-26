@@ -33,7 +33,7 @@ export class RouletteComponent implements OnInit {
       Swal.fire({
         title: `<h3 style='font-size: 2.2rem !important; font-family: Bright !important; color: #270a45;'>${
           winningSymbolNr != 6
-            ? '¡Felicidades, ganaste!'
+            ? ''
             : symbolSegments[winningSymbolNr]
         }</h3>`,
         imageUrl: '/assets/img/logo_tada.png',
@@ -43,7 +43,7 @@ export class RouletteComponent implements OnInit {
         imageAlt: 'Custom image',
         html: `${
           winningSymbolNr != 6
-            ? `<h3 style='font-family: Bright !important;font-size: 2.6rem;color: #270a45;'>
+            ? `<h3 style='font-family: Bright !important;font-size: 2rem;color: #270a45;'>
               ${symbolSegments[winningSymbolNr]} 
               </h3>`
             : ''
