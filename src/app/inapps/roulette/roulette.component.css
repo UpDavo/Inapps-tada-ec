@@ -784,7 +784,7 @@ video {
   font-family: Bright;
   --tw-bg-opacity: 1;
   background-color: hsl(234 17% 12% / var(--tw-bg-opacity));
-  background-image: url("/assets/img/fondo_ruleta.png");
+  background-image: url("/assets/img/bg_ruleta_pilsener.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -927,7 +927,7 @@ video {
   display: block;
   width: 15rem;
   font-size: 20px;
-  margin: 40px auto;
+  margin: 10px auto;
   cursor: pointer;
 }
 

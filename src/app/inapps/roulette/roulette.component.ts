@@ -4,14 +4,14 @@ import confetti from 'canvas-confetti';
 
 // Counter clockwise
 const symbolSegments: any = {
-  1: '¡Felicidades tienes un gift card de $5  CLUBPYCCA!  Recíbelo en el stand.',
-  2: '!Felicidades tienes 15% gratis en cervezas! Recibe tu cupón en el stand.',
-  3: '!Felicidades tienes $3 gratis en cervezas! Recibe tu cupón en el stand.',
-  4: '!Felicidades tienes $4 gratis en cervezas! Recibe tu cupón en el stand.',
-  5: '¡Felicidades tienes un premio CLUBPYCCA! Recíbelo en el stand.',
+  1: '¡Felicidades! ganaste $1 gratis en cerveza con el cupón TADALE1. Descarga la app y canjéalo',
+  2: 'Lo Sentimos, Sigue participando',
+  3: '¡Felicidades! tienes $3 gratis en cervezas! Recibe tu cupón en el stand.',
+  4: 'Lo Sentimos, Sigue participando',
+  5: '¡Felicidades! ganaste $2 gratis en cerveza con el cupón TALIGHT3. Descarga la app y canjéalo',
   6: 'Lo Sentimos, Sigue participando',
-  7: '¡Felicidades tienes un premio TaDa! Recíbelo en el stand.',
-  8: '!Felicidades tienes $2 gratis en cervezas! Recibe tu cupón en el stand. ',
+  // 7: '¡Felicidades tienes un premio TaDa! Recíbelo en el stand.',
+  // 8: '!Felicidades tienes $2 gratis en cervezas! Recibe tu cupón en el stand. ',
 };
 
 @Component({
@@ -28,7 +28,7 @@ export class RouletteComponent implements OnInit {
     // const display = document.querySelector(".display") as HTMLElement | null;
 
     let deg: number = 0;
-    let zoneSize: number = 45; // deg
+    let zoneSize: number = 60; // deg
 
     const handleWin = (actualDeg: any) => {
       const winningSymbolNr: number = Math.ceil(actualDeg / zoneSize);
@@ -48,7 +48,7 @@ export class RouletteComponent implements OnInit {
           imageWidth: '12rem',
           imageHeight: '5rem',
           imageAlt: 'Custom image',
-          html: `<h3 style='font-family: Bright !important;font-size: 2rem;color: #270a45;'>
+          html: `<h3 style='font-size: 1.3rem;color: #270a45;'>
                 ${symbolSegments[winningSymbolNr]} 
                 </h3>`,
           showCloseButton: false,
