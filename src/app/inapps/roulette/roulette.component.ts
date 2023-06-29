@@ -43,7 +43,7 @@ export class RouletteComponent implements OnInit {
 
       setTimeout(() => {
         Swal.fire({
-          imageUrl: '/assets/img/logo_tada.png',
+          imageUrl: '/assets/img/color.png',
           width: '21em',
           imageWidth: '12rem',
           imageHeight: '5rem',
