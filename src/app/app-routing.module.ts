@@ -7,9 +7,15 @@ import { SpinGameComponent } from './inapps/spin/spin-game/spin-game.component';
 import { SpinComponent } from './inapps/spin/spin.component';
 import { CountdownViewComponent } from './inapps/countdown/countdown.component';
 
+//Extra
+import { RouletteComponent2 } from './inapps/roulette2/roulette2.component';
+import { RouletteComponent1 } from './inapps/roulette1/roulette1.component';
+
 const routes: Routes = [
   { path: 'countdown', component: CountdownViewComponent },
   { path: 'roulette', component: RouletteComponent },
+  { path: 'roulette1', component: RouletteComponent1 },
+  { path: 'roulette2', component: RouletteComponent2 },
   { path: 'catching', component: CatchingComponent },
   { path: 'catching/game', component: CatchingGameComponent },
   { path: 'spin', component: SpinComponent },
