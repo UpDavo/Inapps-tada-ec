@@ -10,6 +10,7 @@ import { CountdownViewComponent } from './inapps/countdown/countdown.component';
 //Extra
 import { RouletteComponent2 } from './inapps/roulette2/roulette2.component';
 import { RouletteComponent1 } from './inapps/roulette1/roulette1.component';
+import { SoccerComponent } from './inapps/soccer/soccer.component';
 
 const routes: Routes = [
   { path: 'countdown', component: CountdownViewComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'catching/game', component: CatchingGameComponent },
   { path: 'spin', component: SpinComponent },
   { path: 'spin/game', component: SpinGameComponent },
+  { path: 'soccer', component: SoccerComponent },
 
   // no layout views
   { path: '**', redirectTo: '/', pathMatch: 'full' },

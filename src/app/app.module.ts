@@ -9,6 +9,7 @@ import { CatchingComponent } from './inapps/catching/catching.component';
 import { CatchingGameComponent } from './inapps/catching/catching-game/catching-game.component';
 import { SpinGameComponent } from './inapps/spin/spin-game/spin-game.component';
 import { CountdownViewComponent } from './inapps/countdown/countdown.component';
+import { SoccerComponent } from './inapps/soccer/soccer.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CountdownViewComponent } from './inapps/countdown/countdown.component';
     CatchingGameComponent,
     SpinGameComponent,
     CountdownViewComponent,
+    SoccerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

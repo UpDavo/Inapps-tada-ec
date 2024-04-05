@@ -1,0 +1,86 @@
+<div
+  class="w-full h-screen flex flex-col justify-center items-center relative bg-cover bg-no-repeat bg-center overflow-hidden"
+  style="background-image: url('assets/img/tri_back.png')"
+  align="center"
+>
+  <div class="p-4 md:p-0 md:w-1/2 lg:w-1/3 xl:w-1/4">
+    <div class="mb-6 mt-10">
+      <img class="w-48" src="assets/img/blanco.png" alt="text up" />
+    </div>
+    <div class="grid grid-cols-1 gap-1 items-center">
+      <div class="game-container rounded-lg overflow-hidden shadow-lg">
+        <svg width="100%" height="400">
+          <defs>
+            <pattern
+              id="grassTexture"
+              patternUnits="userSpaceOnUse"
+              width="200"
+              height="100"
+            >
+              <image
+                xlink:href="assets/img/grass.jpg"
+                width="200"
+                height="300"
+              />
+            </pattern>
+          </defs>
+          <!-- Dibuja el campo con bordes redondeados -->
+          <rect
+            width="100%"
+            height="100%"
+            fill="url(#grassTexture)"
+            rx="20"
+            ry="20"
+          />
+          <!-- Dibuja el arco más estilizado -->
+          <rect
+            x="30%"
+            y="5"
+            width="40%"
+            height="60"
+            fill="none"
+            stroke="white"
+            stroke-width="2"
+          />
+          <!-- Dibuja el balón más estilizado -->
+          <circle
+            [attr.cx]="ballPosition.x + '%'"
+            [attr.cy]="animatingGoalAttempt ? 40 : ballPosition.y + '%'"
+            r="10"
+            fill="black"
+            [class.animate-goal]="animatingGoalAttempt"
+          />
+
+          <!-- <image
+            [attr.xlink:href]="'assets/img/soccer.png'"
+            [attr.x]="ballPosition.x + '%'"
+            [attr.y]="animatingGoalAttempt ? 40 : ballPosition.y + '%'"
+            width="20"
+            height="20"
+            [class.animate-goal]="animatingGoalAttempt"
+          /> -->
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div
+    class="w-full mt-auto mb-2 grid content-center justify-center items-center"
+  >
+    <div
+      class="text-center mb-16 text-white animate__animated px-12"
+      align="center"
+    >
+      <img
+        src="assets/img/boton_ruleta_pilsener.png"
+        class="w-36 cursor-pointer hover:scale-105 transform transition duration-150 ease-in-out"
+        alt="Comenzar"
+        (click)="tryToScore()"
+        [class.opacity-50]="goal || attempts === 0"
+        [class.cursor-not-allowed]="goal || attempts === 0"
+      />
+      <h1 class="text-md font-bold animate-pulse mb-1">
+        Intentos restantes: {{ attempts }}
+      </h1>
+    </div>
+  </div>
+</div>
